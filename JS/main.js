@@ -1,6 +1,8 @@
 let score = document.getElementById("score");
 let contador = 0;
 
+let audio = document.getElementById("audio");
+
 let tempo = document.getElementById("tempo");
 let tempoTotal = 30;
 
@@ -23,6 +25,7 @@ let meioMorto = document.getElementById("meioMorto");
 let direitaMorto = document.getElementById("direitaMorto");
 
 let bandits = [janela, telhado, sacada, barril, carroca, esquerda, meio, direita];
+let cores = ["vermelho", "azul", "verde"];
 
 function init(){
     janela.style.display = "none";
@@ -71,10 +74,12 @@ function escondeTiro(obj){
     setTimeout(function(){escondeTiro(obj1)}, 500);
     score.innerText = ++contador;
     tempoTotal = tempoTotal + 2;
+    audio.play();
 }
 
 let rodizio = function(){
     let bandit = bandits[Math.floor(Math.random() * 8)];
+    bandit.setAttribute("src", "/Resources/Img/Inimigo"+cores[Math.floor(Math.random() * 3)]+".png")
     aparece(bandit);
     setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
     let r = setTimeout(rodizio, 1500);

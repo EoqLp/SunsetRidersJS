@@ -232,5 +232,5 @@ div.score{
     grid-area: score;
 }
 .mira{
-    cursor: url("/Sunset-Riders/Resources/Img/cursor.png"), auto;
+    cursor: url(/Resources/Img/cursor1.png), auto;
   }
