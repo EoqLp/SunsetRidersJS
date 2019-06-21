@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>{cursor: url(/Sunset-Riders/Resources/Img/cursor.png) 4 12, auto;}</style>
+</head>
+<body>
+<div class="wrapper">
+    <section>
+        <div class="container background mira">
+        <div class="janela">
+                <img onclick="tiro(janelaMorto, janela)" id="janela" src="/Resources/Img/Inimigo1.png" alt="" srcset="">             <img src="" alt="">
+                <img id="janelaMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="telhado">
+                <img onclick="tiro(telhadoMorto, telhado)" id="telhado" src="/Resources/Img/Inimigo1.png" alt="" srcset="">            <img src="" alt="">
+                <img id="telhadoMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="sacada">
+                <img onclick="tiro(sacadaMorto, sacada)" id="sacada" src="/Resources/Img/Inimigo1.png" alt="" srcset="">             <img src="" alt="">
+                <img id="sacadaMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="barril">
+                <img onclick="tiro(barrilMorto, barril)" id="barril" src="/Resources/Img/Inimigo1.png" alt="" srcset="">             <img src="" alt="">
+                <img id="barrilMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="carroca">
+                <img onclick="tiro(carrocaMorto, carroca)" id="carroca" src="/Resources/Img/Inimigo1.png" alt="" srcset="">            <img src="" alt="">
+                <img id="carrocaMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="esquerda">
+                <img onclick="tiro(esquerdaMorto, esquerda)" id="esquerda" src="/Resources/Img/Inimigo1.png" alt="" srcset="">           <img src="" alt="">
+                <img id="esquerdaMorto" src="/Resources/Img/Inimigo1-1.png" alt=""> 
+                       
+        </div>
+
+        <div class="meio">
+                <img onclick="tiro(meioMorto, meio)" id="meio" src="/Resources/Img/Inimigo1.png" alt="" srcset="">               <img src="" alt="">
+                <img id="meioMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+
+        <div class="direita">
+                <img onclick="tiro(direitaMorto, direita)" id="direita" src="/Resources/Img/Inimigo1.png" alt="" srcset="">            <img src="" alt="">
+                <img id="direitaMorto" src="/Resources/Img/Inimigo1-1.png" alt="">        
+        </div>
+    </div>
+</section>
+    <aside>
+        <div class="nome">
+            <h1>Sunset Riders</h1>
+            <button onclick="encerrarJogo()">encerrar</button>            
+        </div>
+        <div class="score">
+                <h3>Score</h3>
+                <h3 id="score">30</h3>
+        </div>
+        <div class="tempo">
+                        <h3>Tempo</h3>
+                        <h3 id="tempo">30</h3>
+        </div>
+    </aside>
+</div>
+    <script src="JS/main.js"></script>
+</body>
+</html>

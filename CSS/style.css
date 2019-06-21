@@ -1,0 +1,236 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Rye', cursive;
+    
+    height: 100%;
+}
+body{
+   min-height: 100%;
+}
+.custom {
+    cursor: url(/Resources/Img/cursor.png) 4 12, auto;
+}
+
+div.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    grid-template-rows: auto;
+
+    grid-template-areas: "jogo painel";
+    align-content: center;
+
+    background-color: black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+div.container{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 33% 52% 17%;
+    /*border: 1px solid red;*/
+
+    grid-template-areas:
+    "janela telhado sacada"
+    "barril . carroca"
+    "esquerda meio direita";
+
+    /*
+    align-items: center;
+    justify-items: center;
+    */
+
+    min-height: 100%;
+    
+}
+.janela{
+    grid-area: janela;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c";
+}
+
+div.janela>img{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    height: 100px;
+    padding-top: 19px; 
+    padding-right: 42px;
+}
+.telhado{
+    grid-area: telhado;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c";
+}
+div.telhado>img{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    height: 100px;
+    padding-top: 25px;
+    padding-right: 28px;  
+}
+.sacada{
+    grid-area: sacada;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c";
+    justify-content: end;
+}
+div.sacada>img{
+    grid-column: 4/4;
+    grid-row: 2/4;
+    height: 100px; 
+    padding-top: 5px;
+}
+.barril{
+    grid-area: barril;
+    border: 3px solid blue;
+    display: grid;
+    grid-template-areas: 
+    "a a b"
+    "b b b"
+    "c c c";
+    justify-content: center;
+    align-content: center;
+}
+div.barril>img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 130px;
+    padding-top: 5px;
+}
+.carroca{
+    grid-area: carroca;
+    border: 3px solid blue;
+    display: grid;
+    grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c";
+    justify-content: end;
+    align-content: end;
+}
+div.carroca>img{
+    grid-column: 4/4;
+    grid-row: 4/4;
+    height: 110px; 
+
+}
+.esquerda{
+    grid-area: esquerda;
+    /*border: 3px solid black;*/
+    display: grid;
+    grid-template-areas: 
+    "a a a"
+    "b b b"
+    "c c c";
+    justify-content: center;
+    align-content: end
+}
+div.esquerda>img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 190px;
+}
+.meio{
+    grid-area: meio;
+    /*border: 3px solid black;*/
+    display: grid;
+    grid-template-areas: 
+    "a a a"
+    "b b b"
+    "c c c";
+    justify-content: center;
+    align-content: end;
+}
+div.meio>img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 190px; 
+}
+.direita{
+    grid-area: direita;
+    /*border: 3px solid black;*/
+    display: grid;
+    grid-template-areas: 
+    "a a a"
+    "b b b"
+    "c c c";
+    justify-content: center;
+    align-content: end;
+}
+div.direita>img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100px; 
+    height: 190px;
+}
+.background{
+    background-image: url("/Resources/Img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section{
+    background-color: black;
+    display: grid;
+    grid-area: jogo;
+   
+}
+
+aside{
+    display: grid;
+    grid-area: painel;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 75%;
+    background-color: rgb(111, 50, 31);
+
+    grid-template-areas: 
+    "nome nome"
+    "score tempo";
+
+    justify-items: center;
+    align-items: center;
+
+}
+
+div.nome{
+    grid-area: nome;
+    
+}
+
+h1{
+    font-size: 72px;
+    font: yellow;
+}
+
+h3{
+    font-size: 36px;
+}
+
+div.tempo{
+    grid-area: tempo;
+}
+
+div.score{
+    grid-area: score;
+}
+.mira{
+    cursor: url("/Sunset-Riders/Resources/Img/cursor.png"), auto;
+  }
