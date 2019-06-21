@@ -1,10 +1,14 @@
+let audio = document.getElementById("audio");
+let display = document.getElementById("display");
+let btnInit = document.getElementById("btnInit");
+let controladorT = 0;
+let controladorR = 0;
+
 let score = document.getElementById("score");
 let contador = 0;
 
-let audio = document.getElementById("audio");
-
 let tempo = document.getElementById("tempo");
-let tempoTotal = 30;
+let tempoTotal = 5;
 
 let janela = document.getElementById("janela");
 let telhado = document.getElementById("telhado");
@@ -46,8 +50,13 @@ function init(){
     meioMorto.style.display = "none";
     direitaMorto.style.display = "none";
 
-    score.innerText = 0;
-    tempoTotal.innerText = 30;
+    tempoTotal = 5;
+    contador = 0;
+
+    rodizio();
+    cronometro();
+
+    btnInit.style.display="none";
 }
 
 function aparece(obj){
@@ -74,7 +83,10 @@ function escondeTiro(obj){
     aparece(obj1);
     setTimeout(function(){escondeTiro(obj1)}, 500);
     score.innerText = ++contador;
-    tempoTotal = tempoTotal + 2;
+    let aux = Math.floor(Math.random() * 5);
+    if(aux == 1){
+        tempoTotal = tempoTotal + 2;
+    }    
     audio.play();
 }
 
@@ -84,24 +96,20 @@ let rodizio = function(){
     bandit.setAttribute("src", "/Resources/Img/Inimigo"+cor+".png");
     bandit.setAttribute("name", cor);
     aparece(bandit);
-    setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
-    let r = setTimeout(rodizio, 1500);
+    let controladorE = setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
+    controladorR = setTimeout(rodizio, 1500);
     if(tempoTotal == 0){
-        clearTimeout(r);
+        clearTimeout(controladorE);
+        clearTimeout(controladorR);
     }
 }
 let cronometro = function(){
-    let t  = setTimeout(function(){
+    controladorT  = setTimeout(function(){
         tempo.innerText = --tempoTotal;
         setTimeout(cronometro, 500 );
     }, 500);
     if(tempoTotal == 0){
-        clearTimeout(t);
+        clearTimeout(controladorT);
+        btnInit.style.display="";
     }
 }
-
-rodizio();
-cronometro();
-init();
-
-comecarJogo();

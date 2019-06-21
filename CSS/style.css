@@ -234,3 +234,11 @@ div.score{
 .mira{
     cursor: url(/Resources/Img/cursor1.png), auto;
 }
+
+#btnInit{
+    margin-left: 30%; 
+}
+
+aside#display{
+    display: grid;
+}
