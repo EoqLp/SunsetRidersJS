@@ -51,7 +51,6 @@ div.container{
 }
 .janela{
     grid-area: janela;
-    border: 3px solid yellow;
     display: grid;
     grid-template-areas: 
     "a a a a"
@@ -68,7 +67,6 @@ div.janela>img{
 }
 .telhado{
     grid-area: telhado;
-    border: 3px solid yellow;
     display: grid;
     grid-template-areas: 
     "a a a a"
@@ -84,7 +82,6 @@ div.telhado>img{
 }
 .sacada{
     grid-area: sacada;
-    border: 3px solid yellow;
     display: grid;
     grid-template-areas: 
     "a a a a"
@@ -100,7 +97,6 @@ div.sacada>img{
 }
 .barril{
     grid-area: barril;
-    border: 3px solid blue;
     display: grid;
     grid-template-areas: 
     "a a b"
@@ -113,11 +109,9 @@ div.barril>img{
     grid-column: 2/3;
     grid-row: 2/3;
     height: 130px;
-    padding-top: 5px;
 }
 .carroca{
     grid-area: carroca;
-    border: 3px solid blue;
     display: grid;
     grid-template-areas: 
     "a a a a"

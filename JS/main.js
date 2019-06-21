@@ -96,10 +96,9 @@ let rodizio = function(){
     bandit.setAttribute("src", "/Resources/Img/Inimigo"+cor+".png");
     bandit.setAttribute("name", cor);
     aparece(bandit);
-    let controladorE = setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
+    setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
     controladorR = setTimeout(rodizio, 1500);
     if(tempoTotal == 0){
-        clearTimeout(controladorE);
         clearTimeout(controladorR);
     }
 }
