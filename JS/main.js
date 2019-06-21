@@ -70,6 +70,7 @@ function escondeTiro(obj){
  function tiro(obj1, obj2){
     escondeTiro(obj2);
     console.log("You got me!");
+    obj1.setAttribute("src", "/Resources/Img/Inimigo"+obj2.getAttribute("name")+"Morto.png");
     aparece(obj1);
     setTimeout(function(){escondeTiro(obj1)}, 500);
     score.innerText = ++contador;
@@ -79,7 +80,9 @@ function escondeTiro(obj){
 
 let rodizio = function(){
     let bandit = bandits[Math.floor(Math.random() * 8)];
-    bandit.setAttribute("src", "/Resources/Img/Inimigo"+cores[Math.floor(Math.random() * 3)]+".png")
+    let cor = cores[Math.floor(Math.random() * 3)]
+    bandit.setAttribute("src", "/Resources/Img/Inimigo"+cor+".png");
+    bandit.setAttribute("name", cor);
     aparece(bandit);
     setTimeout(function(){if(bandit.style.display != "none"){esconde(bandit)}}, 1000);
     let r = setTimeout(rodizio, 1500);
