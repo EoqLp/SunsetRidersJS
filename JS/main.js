@@ -8,7 +8,7 @@ let score = document.getElementById("score");
 let contador = 0;
 
 let tempo = document.getElementById("tempo");
-let tempoTotal = 5;
+let tempoTotal = 30;
 
 let janela = document.getElementById("janela");
 let telhado = document.getElementById("telhado");
@@ -50,7 +50,7 @@ function init(){
     meioMorto.style.display = "none";
     direitaMorto.style.display = "none";
 
-    tempoTotal = 5;
+    tempoTotal = 30;
     contador = 0;
 
     rodizio();
