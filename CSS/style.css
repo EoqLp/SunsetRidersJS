@@ -34,20 +34,13 @@ div.container{
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 33% 52% 17%;
-    /*border: 1px solid red;*/
 
     grid-template-areas:
     "janela telhado sacada"
     "barril . carroca"
     "esquerda meio direita";
 
-    /*
-    align-items: center;
-    justify-items: center;
-    */
-
     min-height: 100%;
-    
 }
 .janela{
     grid-area: janela;
