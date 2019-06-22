@@ -219,7 +219,7 @@ div.score{
     grid-area: score;
 }
 .mira{
-    cursor: url(/Resources/Img/cursor1.png), auto;
+    cursor: url(/Resources/Img/cursor.png), auto;
 }
 
 #btnInit{
