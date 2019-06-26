@@ -1,6 +1,7 @@
 let audio = document.getElementById("audio");
 let display = document.getElementById("display");
 let btnInit = document.getElementById("btnInit");
+
 let controladorT = 0;
 let controladorR = 0;
 
